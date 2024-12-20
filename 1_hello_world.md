@@ -1,7 +1,5 @@
 # Comment & Print
 
-
-
 ### 1.1 Comments
 
 - Regular comments, which will be ignored by __rust-compiler__
@@ -11,8 +9,6 @@
 - Doc comments
   `/// generate doc for the folling line`
   `//! generate doc for the file`
-
-
 
 For example:
 
@@ -26,13 +22,9 @@ fn main() {
 }
 ```
 
-
-
 ### 1.2 Formatted print
 
 > Printing is handled by a series of `macros` defined in `std:fmt` 
-
-
 
 1. `format!` : write formatted text to `String`
 
@@ -43,8 +35,6 @@ fn main() {
 4. `eprint!` : write formatted text to `io::stderr`
 
 5. `eprintln!` : write formatted text to `io::stderr`, end with a `\n`
-
-
 
 ```rust
 use std::fmt::{Debug, Display};
@@ -113,10 +103,7 @@ fn main() {
         }
     )
 }
-
 ```
-
-
 
 #### Precision
 
@@ -140,20 +127,13 @@ fn main() {
     println!("Hello {} is {:.*}", "x", 5, 0.01); // Hello x is 0.01000
     println!("Hello {} is {2:.*}", "x", 4, 0.01); // Hello x is 0.0100
 }
-
 ```
 
-
-
 ### Display or Debug
-
-
 
 > `fmt::Debug` hardly looks compact and clean, but you need not implement trait
 > 
 > `fmt::Display` may be cleaner than `fmt::Debug` but you need implement Display trait In most cases
-
-
 
 ```rust
 //! pretty printing for Vector
@@ -178,10 +158,7 @@ fn main() {
 
     println!("a = {a}");
 }
-
 ```
-
-
 
 ### Activity
 
@@ -211,7 +188,4 @@ fn main() {
     println!("{b}"); // RGB (0, 3, 254) 0x0003fe
     println!("{c}"); // RGB (0, 0, 0) 0x000000
 }
-
 ```
-
-
